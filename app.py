@@ -4,7 +4,16 @@ import webbrowser
 import threading
 import time
 
-# ==============================================================================
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template("index.html")
+
+if __name__ == '__main__':
+    app.run() ==============================================================================
 # EAGLE'S EYE TV — NEXT-GEN PREMIUM ARCHITECTURE CORE
 # Fully compliant with feature documents: 8a50b27a and 1508b925
 # ==============================================================================
